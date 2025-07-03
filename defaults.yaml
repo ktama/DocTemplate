@@ -9,11 +9,15 @@ number-sections: false
 highlight-style: null
 html-math-method: katex
 
+# Mermaid設定
+filters:
+  - mermaid.lua
+
 # 入出力設定
 input-files: []
 output-file: output.html
 
-# Markdown拡張機能（正しい設定項目名）
+# Markdown拡張機能
 reader: markdown+fenced_code_blocks+fenced_code_attributes+backtick_code_blocks+auto_identifiers+header_attributes+implicit_header_references+table_captions+pipe_tables+strikeout+superscript+subscript+task_lists
 
 # HTMLオプション

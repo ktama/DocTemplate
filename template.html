@@ -8,13 +8,27 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="prism-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ startOnLoad: true });
+    </script>
 </head>
 
 <body>
     <button class="mobile-menu-toggle" onclick="toggleSidebar()">☰</button>
 
+    <!-- 機密等級表示 -->
+    $if(confidential-level)$
+    <div class="confidential-level">
+        $confidential-level$
+        $if(disclosure-to)$
+        <div class="disclosure">($disclosure-to$には開示可)</div>
+        $endif$
+    </div>
+    $endif$
+
     <div class="sidebar" id="sidebar">
-        <h3>目次</h3>
+        <h3>📑 目次</h3>
         $toc$
     </div>
 

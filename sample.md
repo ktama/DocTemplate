@@ -1,83 +1,156 @@
-<!-- 機密等級: 社外秘 -->
-# ドキュメントサンプル
-
-このMarkdownファイルは、様々な要素を含む**サンプルテンプレート**です。
-
-## 見出しのサンプル
-
-### 小見出しの例
-
-見出しには `#` を用いて階層を表現します。
-
+---
+title: "技術仕様書サンプル"
+confidential-level: "社外秘"
+disclosure-to: "ABC株式会社"
 ---
 
-## 箇条書き（Bullet List）
+# システム概要
 
-- Apple 🍎
-- Banana 🍌
-- Cherry 🍒
+このドキュメントは、新システムの技術仕様について説明します。
 
----
+## アーキテクチャ
 
-## 引用（Blockquote）
+### システム構成
 
-> この文は引用です。  
-> Markdownでは `>` を使って引用を表現します。
+システムは以下の3層で構成されます：
 
----
+- **プレゼンテーション層**: Web UI
+- **ビジネスロジック層**: API サーバー
+- **データ層**: データベース
 
-## 番号付きリスト（Ordered List）
-
-1. はじめに
-2. 手順
-   1. データを入力
-   2. 結果を確認
-3. 終わりに
-
----
-
-## 表（Table）
-
-| 名前      | 年齢 | 所属       |
-| --------- | ---- | ---------- |
-| 山田 太郎 | 29   | 開発部     |
-| 佐藤 花子 | 33   | デザイン課 |
-
----
-
-## Mermaid 図表
+**システム構成図**
 
 ```mermaid
 graph TD
-  A[開始] --> B{条件分岐}
-  B -->|はい| C[処理1]
-  B -->|いいえ| D[処理2]
-  C --> E[終了]
-  D --> E
-````
+    A[Webアプリケーション] --> B[APIサーバー]
+    B --> C[データベース]
+    B --> D[キャッシュサーバー]
+    D --> E[Redis]
+    C --> F[PostgreSQL]
+```
 
----
+**フローチャート例**
 
-## コードサンプル
+```mermaid
+flowchart TD
+    Start([開始]) --> Input[入力]
+    Input --> Process{処理}
+    Process -->|成功| Success[成功]
+    Process -->|失敗| Error[エラー]
+    Success --> End([終了])
+    Error --> End
+```
 
-### Pythonの例
+**シーケンス図例**
+
+```mermaid
+sequenceDiagram
+    participant User as ユーザー
+    participant API as APIサーバー
+    participant DB as データベース
+    
+    User->>API: リクエスト送信
+    API->>DB: データ取得
+    DB-->>API: データ返却
+    API-->>User: レスポンス返却
+```
+
+
+### 技術スタック
+
+#### フロントエンド
+
+```javascript
+// React コンポーネントの例
+import React from 'react';
+
+const UserProfile = ({ user }) => {
+  return (
+    <div className="user-profile">
+      <h2>{user.name}</h2>
+      <p>{user.email}</p>
+    </div>
+  );
+};
+```
+
+#### バックエンド
 
 ```python
-def greet(name):
-    print(f"Hello, {name}!")
+# Flask API の例
+from flask import Flask, jsonify
 
-greet("World")
+app = Flask(__name__)
+
+@app.route('/api/users')
+def get_users():
+    return jsonify([
+        {'id': 1, 'name': '田中太郎'},
+        {'id': 2, 'name': '佐藤花子'}
+    ])
 ```
 
-### Bashの例
+## データベース設計
 
-```bash
-#!/bin/bash
-echo "Hello, Bash!"
+### テーブル構成
+
+| テーブル名 | 説明         | 主キー     |
+| ---------- | ------------ | ---------- |
+| users      | ユーザー情報 | user_id    |
+| posts      | 投稿データ   | post_id    |
+| comments   | コメント     | comment_id |
+
+### ER図
+
+> データベースの関係性については、別途ER図を参照してください。
+
+## API仕様
+
+### 認証API
+
+#### エンドポイント
+
+- `POST /api/auth/login` - ログイン
+- `POST /api/auth/logout` - ログアウト
+- `GET /api/auth/profile` - プロフィール取得
+
+#### レスポンス例
+
+```json
+{
+  "status": "success",
+  "data": {
+    "user_id": 123,
+    "username": "tanaka",
+    "email": "tanaka@example.com"
+  }
+}
 ```
 
----
+## セキュリティ対策
 
-## おわりに
+### 認証・認可
 
-Markdownはシンプルで拡張性が高く、技術ドキュメント作成に非常に便利です。
+1. JWT トークンによる認証
+2. ロールベースアクセス制御（RBAC）
+3. APIレート制限
+
+### データ保護
+
+- 個人情報の暗号化
+- HTTPS通信の強制
+- SQLインジェクション対策
+
+## 運用・保守
+
+### 監視項目
+
+- サーバーリソース使用率
+- レスポンス時間
+- エラー発生率
+
+### バックアップ
+
+- データベース: 日次バックアップ
+- ファイル: 週次バックアップ
+- 復旧テスト: 月次実施
