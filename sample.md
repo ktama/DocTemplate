@@ -1,7 +1,7 @@
 ---
 title: "技術仕様書サンプル"
 confidential-level: "社外秘"
-disclosure-to: "ABC株式会社"
+disclosure-to: "XXX"
 ---
 
 # システム概要
