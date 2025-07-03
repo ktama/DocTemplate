@@ -1,0 +1,21 @@
+# Pandocデフォルト設定
+from: markdown
+to: html5
+standalone: true
+template: template.html
+toc: true
+toc-depth: 4
+number-sections: false
+highlight-style: null
+html-math-method: katex
+
+# 入出力設定
+input-files: []
+output-file: output.html
+
+# Markdown拡張機能（正しい設定項目名）
+reader: markdown+fenced_code_blocks+fenced_code_attributes+backtick_code_blocks+auto_identifiers+header_attributes+implicit_header_references+table_captions+pipe_tables+strikeout+superscript+subscript+task_lists
+
+# HTMLオプション
+html-q-tags: true
+ascii: false
