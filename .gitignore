@@ -2,3 +2,5 @@
 *.html
 # 生成に使用するtemplate.htmlは追跡対象
 !template.html
+# スタイルチェックのサンプルファイルは追跡対象
+!style-check-sample.html

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技術仕様書サンプル</title>
+    <style type="text/css">* {margin: 0;padding: 0;box-sizing: border-box;}body {font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;line-height: 1.6;color: #2c3e50;background-color: #ffffff;padding-left: 280px;position: relative;}.confidential-level {position: fixed;top: 20px;right: 20px;background-color: #fff;color: #b30000;font-weight: bold;font-size: 1.1em;padding: 0 4px;border: 2px solid #b30000;border-radius: 0;z-index: 1001;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);text-align: center;}.confidential-level .disclosure {font-size: 0.85em;color: #b30000;font-weight: normal;}.container {max-width: 1000px;margin: 0 auto;padding: 60px 20px 40px 20px;}h1 {font-size: 2em;font-weight: 600;color: #2c3e50;margin: 1.6em 0 0.8em 0;padding: 0.5em 0 0.3em 1em;border-bottom: 2px solid #bdc3c7;background: #f9f9f9;border-radius: 6px 6px 0 0;}h2 {font-size: 1.6em;font-weight: 500;color: #34495e;margin: 1.4em 0 0.8em 0;padding: 0.5em 0 0.3em 1em;border-left: 4px solid #95a5a6;background-color: #f4f6f6;border-radius: 0 6px 6px 0;}h3 {font-size: 1.3em;font-weight: 500;color: #2c3e50;margin: 1em 0 0.5em 0;padding: 0.3em 0 0.3em 1em;border-left: 3px solid #b0bec5;background-color: #f9f9f9;border-radius: 0 4px 4px 0;}h4 {font-size: 1.15em;font-weight: 500;color: #2c3e50;margin: 1em 0 0.5em 0;padding: 0.2em 0 0.2em 0.8em;border-left: 2px solid #c0c0c0;background-color: #fcfcfc;border-radius: 0 4px 4px 0;}p {margin: 1.2em 0;line-height: 1.7;text-align: justify;}.note {background-color: #eef5fb;border-left: 5px solid #90caf9;color: #1a1a1a;}.warning {background-color: #fffbe6;border-left: 5px solid #fbc02d;color: #333;}.info {background-color: #eefcf1;border-left: 5px solid #81c784;color: #2e7d32;}.tip {background-color: #f9f5fc;border-left: 5px solid #ba68c8;color: #4a148c;}.note,.warning,.info,.tip {margin: 1.2em 0;padding: 1em 1.2em;border-radius: 6px;}ul,ol {margin: 1.2em 0;padding-left: 2em;}li {margin: 0.6em 0;line-height: 1.6;}pre {position: relative;background-color: #f4f4f4;color: #2c3e50;border: 1px solid #ccc;border-radius: 6px;padding: 1em;margin: 1.5em 0;overflow-x: auto;font-size: 0.9em;}pre:before {content: "CODE";position: absolute;top: 0;right: 0;background-color: #ccc;color: #333;padding: 0.3em 0.8em;font-size: 0.7em;border-radius: 0 6px 0 6px;font-weight: bold;}code {background-color: #f0f0f0;color: #333;padding: 0.2em 0.5em;border-radius: 4px;font-size: 0.9em;font-family: "Consolas", "Monaco", "Courier New", monospace;font-weight: 500;}blockquote {border-left: 4px solid #bdc3c7;padding: 1em 1.5em;margin: 1.5em 0;background-color: #f9f9f9;color: #555;font-style: italic;border-radius: 0 6px 6px 0;}table {width: 100%;border-collapse: collapse;margin: 1.5em 0;border: 1px solid #ddd;}th,td {border: 1px solid #ddd;padding: 0.75em;text-align: left;}th {background-color: #f0f0f0;color: #2c3e50;font-weight: 600;}.sidebar {position: fixed;top: 0;left: 0;width: 260px;height: 100vh;background-color: #f2f2f2;color: #2c3e50;border-right: 1px solid #ccc;overflow-y: auto;padding: 20px;z-index: 1000;}.sidebar h3 {font-size: 1.1em;margin-bottom: 1em;color: #2c3e50;}.toc a {text-decoration: none;color: #2c3e50;font-size: 0.9em;display: block;padding: 0.3em 0.6em;border-radius: 6px;}.toc a:hover {background-color: #dcdcdc;color: #000;}.toc .toc-h1 {font-weight: 600;margin-top: 1em;}.toc .toc-h2 {padding-left: 1.2em;}.toc .toc-h3 {padding-left: 2em;}.toc .toc-h4 {padding-left: 2.8em;}@media (max-width: 768px) {body {padding-left: 0;}.sidebar {display: none;}.container {padding: 80px 15px 20px 15px;}.confidential-level {position: absolute;top: 10px;right: 10px;font-size: 0.9em;padding: 8px 12px;min-width: 120px;word-break: break-word;}h1 {font-size: 2em;}h2 {font-size: 1.5em;}h3 {font-size: 1.3em;}.mobile-menu-toggle {display: block;outline: none;}.mobile-menu-toggle:focus {outline: 2px solid #3182ce;outline-offset: 2px;}.sidebar.show {display: block;position: fixed;z-index: 1001;}}.mobile-menu-toggle {display: none;position: fixed;top: 20px;left: 20px;z-index: 1002;background-color: #2d3748;color: white;border: none;padding: 10px;border-radius: 4px;cursor: pointer;}@media print {body {padding-left: 0;color: #000;}.sidebar {display: none;}.mobile-menu-toggle {display: none;}.confidential-level {position: absolute;color: #dc3545 !important;background-color: #fff;border: 2px solid #dc3545;}h1,h2,h3,h4 {page-break-after: avoid;}pre {page-break-inside: avoid;}}</style>
+    <style type="text/css">code[class*="language-"],pre[class*="language-"] {color: #37352f;background: none;font-family: "Consolas", "Monaco", "Courier New", monospace;font-size: 0.9em;text-align: left;white-space: pre;word-spacing: normal;word-break: normal;word-wrap: normal;line-height: 1.5;tab-size: 4;hyphens: none;}pre[class*="language-"] {position: relative;margin: 1.5em 0;padding: 1.5em;overflow: auto;border-radius: 8px;}.token.comment,.token.prolog,.token.doctype,.token.cdata {color: #6f6f6f;font-style: italic;}.token.punctuation {color: #999;}.token.property,.token.tag,.token.boolean,.token.number,.token.constant,.token.symbol,.token.deleted {color: #e60012;}.token.selector,.token.attr-name,.token.string,.token.char,.token.builtin,.token.inserted {color: #0969da;}.token.operator,.token.entity,.token.url,.language-css .token.string,.style .token.string {color: #9a6e3a;}.token.atrule,.token.attr-value,.token.keyword {color: #d73a49;}.token.function,.token.class-name {color: #6f42c1;}.token.regex,.token.important,.token.variable {color: #e36209;}.token.important,.token.bold {font-weight: bold;}.token.italic {font-style: italic;}.token.entity {cursor: help;}</style>
+    <style type="text/css">code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style>
+    <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+
+<body>
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- 機密等級表示 -->
+        <div class="confidential-level">
+        社外秘
+                <div class="disclosure">(XXXには開示可)</div>
+            </div>
+    
+    <div class="sidebar" id="sidebar">
+        <h3>📑 目次</h3>
+        <ul>
+        <li><a href="#ドキュメントタイトル" id="toc-ドキュメントタイトル"><span class="toc-section-number">1</span> ドキュメントタイトル</a>
+        <ul>
+        <li><a href="#概要" id="toc-概要"><span class="toc-section-number">1.1</span> 概要</a></li>
+        <li><a href="#見出しの確認" id="toc-見出しの確認"><span class="toc-section-number">1.2</span> 見出しの確認</a>
+        <ul>
+        <li><a href="#h3の見出し" id="toc-h3の見出し"><span class="toc-section-number">1.2.1</span> H3の見出し</a>
+        <ul>
+        <li><a href="#h4の見出し" id="toc-h4の見出し"><span class="toc-section-number">1.2.1.1</span> H4の見出し</a></li>
+        </ul></li>
+        </ul></li>
+        <li><a href="#リストの確認" id="toc-リストの確認"><span class="toc-section-number">1.3</span> リストの確認</a></li>
+        <li><a href="#引用" id="toc-引用"><span class="toc-section-number">1.4</span> 引用</a></li>
+        <li><a href="#テーブル" id="toc-テーブル"><span class="toc-section-number">1.5</span> テーブル</a></li>
+        <li><a href="#コード" id="toc-コード"><span class="toc-section-number">1.6</span> コード</a>
+        <ul>
+        <li><a href="#インラインコード" id="toc-インラインコード"><span class="toc-section-number">1.6.1</span>
+        インラインコード</a></li>
+        <li><a href="#ブロックコード" id="toc-ブロックコード"><span class="toc-section-number">1.6.2</span> ブロックコード</a></li>
+        </ul></li>
+        <li><a href="#注釈スタイル" id="toc-注釈スタイル"><span class="toc-section-number">1.7</span> 注釈スタイル</a></li>
+        <li><a href="#mermaidグラフ" id="toc-mermaidグラフ"><span class="toc-section-number">1.8</span> Mermaidグラフ</a></li>
+        </ul></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 data-number="1" id="ドキュメントタイトル"><span class="header-section-number">1</span> ドキュメントタイトル</h1>
+        <p>この文書は、スタイルシートの動作確認用に作成されたMarkdownのサンプルです。</p>
+        <h2 data-number="1.1" id="概要"><span class="header-section-number">1.1</span> 概要</h2>
+        <p>以下のような内容を含み、レンダリング結果を視覚的に確認します。</p>
+        <ul>
+        <li>見出し（H1～H4）</li>
+        <li>箇条書き、番号付きリスト</li>
+        <li>引用</li>
+        <li>コードブロック（インライン／ブロック）</li>
+        <li>テーブル</li>
+        <li>注釈スタイル（.note など）</li>
+        <li>Mermaidグラフ</li>
+        </ul>
+        <h2 data-number="1.2" id="見出しの確認"><span class="header-section-number">1.2</span> 見出しの確認</h2>
+        <h3 data-number="1.2.1" id="h3の見出し"><span class="header-section-number">1.2.1</span> H3の見出し</h3>
+        <p>ここでは段階的な見出しのスタイルを確認します。</p>
+        <h4 data-number="1.2.1.1" id="h4の見出し"><span class="header-section-number">1.2.1.1</span> H4の見出し</h4>
+        <p>段落や装飾の違いを見てみましょう。</p>
+        <h2 data-number="1.3" id="リストの確認"><span class="header-section-number">1.3</span> リストの確認</h2>
+        <ul>
+        <li>箇条書き1
+        <ul>
+        <li>ネスト項目A</li>
+        <li>ネスト項目B</li>
+        </ul></li>
+        <li>箇条書き2</li>
+        </ul>
+        <ol type="1">
+        <li>番号リスト</li>
+        <li>番号リスト
+        <ol type="1">
+        <li>ネストリスト</li>
+        </ol></li>
+        </ol>
+        <h2 data-number="1.4" id="引用"><span class="header-section-number">1.4</span> 引用</h2>
+        <blockquote>
+        <p>これは引用の例です。背景色と左線で装飾されます。</p>
+        </blockquote>
+        <h2 data-number="1.5" id="テーブル"><span class="header-section-number">1.5</span> テーブル</h2>
+        <table>
+        <thead>
+        <tr>
+        <th>項目</th>
+        <th>説明</th>
+        <th>備考</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>A</td>
+        <td>テスト1</td>
+        <td>OK</td>
+        </tr>
+        <tr>
+        <td>B</td>
+        <td>テスト2</td>
+        <td>NG</td>
+        </tr>
+        </tbody>
+        </table>
+        <h2 data-number="1.6" id="コード"><span class="header-section-number">1.6</span> コード</h2>
+        <h3 data-number="1.6.1" id="インラインコード"><span class="header-section-number">1.6.1</span> インラインコード</h3>
+        <p><code>console.log(&quot;Hello, world!&quot;);</code></p>
+        <h3 data-number="1.6.2" id="ブロックコード"><span class="header-section-number">1.6.2</span> ブロックコード</h3>
+        <pre class="python"><code>def hello():
+    print(&quot;Hello, world!&quot;)</code></pre>
+        <h2 data-number="1.7" id="注釈スタイル"><span class="header-section-number">1.7</span> 注釈スタイル</h2>
+        <div class="note">
+        <p>これはNoteスタイルの注釈です。補足情報やヒントに使います。</p>
+        </div>
+        <div class="warning">
+        <p>これはWarningスタイルの注釈です。注意喚起に使います。</p>
+        </div>
+        <div class="info">
+        <p>これはInfoスタイルの注釈です。補足的な情報に使います。</p>
+        </div>
+        <div class="tip">
+        <p>これはTipスタイルの注釈です。ちょっとしたコツなどに使います。</p>
+        </div>
+        <h2 data-number="1.8" id="mermaidグラフ"><span class="header-section-number">1.8</span> Mermaidグラフ</h2>
+        <pre class="mermaid">
+        graph TD
+            A[ユーザー] --&gt; B[アプリケーション]
+            B --&gt; C[サーバー]
+            C --&gt; D[データベース]
+        </pre>
+    </div>
+
+    <script>var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(e){var n=/(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i,t=0,r={},a={manual:e.Prism&&e.Prism.manual,disableWorkerMessageHandler:e.Prism&&e.Prism.disableWorkerMessageHandler,util:{encode:function e(n){return n instanceof i?new i(n.type,e(n.content),n.alias):Array.isArray(n)?n.map(e):n.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).slice(8,-1)},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function e(n,t){var r,i;switch(t=t||{},a.util.type(n)){case"Object":if(i=a.util.objId(n),t[i])return t[i];for(var l in r={},t[i]=r,n)n.hasOwnProperty(l)&&(r[l]=e(n[l],t));return r;case"Array":return i=a.util.objId(n),t[i]?t[i]:(r=[],t[i]=r,n.forEach((function(n,a){r[a]=e(n,t)})),r);default:return n}},getLanguage:function(e){for(;e;){var t=n.exec(e.className);if(t)return t[1].toLowerCase();e=e.parentElement}return"none"},setLanguage:function(e,t){e.className=e.className.replace(RegExp(n,"gi"),""),e.classList.add("language-"+t)},currentScript:function(){if("undefined"==typeof document)return null;if("currentScript"in document)return document.currentScript;try{throw new Error}catch(r){var e=(/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(r.stack)||[])[1];if(e){var n=document.getElementsByTagName("script");for(var t in n)if(n[t].src==e)return n[t]}return null}},isActive:function(e,n,t){for(var r="no-"+n;e;){var a=e.classList;if(a.contains(n))return!0;if(a.contains(r))return!1;e=e.parentElement}return!!t}},languages:{plain:r,plaintext:r,text:r,txt:r,extend:function(e,n){var t=a.util.clone(a.languages[e]);for(var r in n)t[r]=n[r];return t},insertBefore:function(e,n,t,r){var i=(r=r||a.languages)[e],l={};for(var o in i)if(i.hasOwnProperty(o)){if(o==n)for(var s in t)t.hasOwnProperty(s)&&(l[s]=t[s]);t.hasOwnProperty(o)||(l[o]=i[o])}var u=r[e];return r[e]=l,a.languages.DFS(a.languages,(function(n,t){t===u&&n!=e&&(this[n]=l)})),l},DFS:function e(n,t,r,i){i=i||{};var l=a.util.objId;for(var o in n)if(n.hasOwnProperty(o)){t.call(n,o,n[o],r||o);var s=n[o],u=a.util.type(s);"Object"!==u||i[l(s)]?"Array"!==u||i[l(s)]||(i[l(s)]=!0,e(s,t,o,i)):(i[l(s)]=!0,e(s,t,null,i))}}},plugins:{},highlightAll:function(e,n){a.highlightAllUnder(document,e,n)},highlightAllUnder:function(e,n,t){var r={callback:t,container:e,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};a.hooks.run("before-highlightall",r),r.elements=Array.prototype.slice.apply(r.container.querySelectorAll(r.selector)),a.hooks.run("before-all-elements-highlight",r);for(var i,l=0;i=r.elements[l++];)a.highlightElement(i,!0===n,r.callback)},highlightElement:function(n,t,r){var i=a.util.getLanguage(n),l=a.languages[i];a.util.setLanguage(n,i);var o=n.parentElement;o&&"pre"===o.nodeName.toLowerCase()&&a.util.setLanguage(o,i);var s={element:n,language:i,grammar:l,code:n.textContent};function u(e){s.highlightedCode=e,a.hooks.run("before-insert",s),s.element.innerHTML=s.highlightedCode,a.hooks.run("after-highlight",s),a.hooks.run("complete",s),r&&r.call(s.element)}if(a.hooks.run("before-sanity-check",s),(o=s.element.parentElement)&&"pre"===o.nodeName.toLowerCase()&&!o.hasAttribute("tabindex")&&o.setAttribute("tabindex","0"),!s.code)return a.hooks.run("complete",s),void(r&&r.call(s.element));if(a.hooks.run("before-highlight",s),s.grammar)if(t&&e.Worker){var c=new Worker(a.filename);c.onmessage=function(e){u(e.data)},c.postMessage(JSON.stringify({language:s.language,code:s.code,immediateClose:!0}))}else u(a.highlight(s.code,s.grammar,s.language));else u(a.util.encode(s.code))},highlight:function(e,n,t){var r={code:e,grammar:n,language:t};if(a.hooks.run("before-tokenize",r),!r.grammar)throw new Error('The language "'+r.language+'" has no grammar.');return r.tokens=a.tokenize(r.code,r.grammar),a.hooks.run("after-tokenize",r),i.stringify(a.util.encode(r.tokens),r.language)},tokenize:function(e,n){var t=n.rest;if(t){for(var r in t)n[r]=t[r];delete n.rest}var a=new s;return u(a,a.head,e),o(e,a,n,a.head,0),function(e){for(var n=[],t=e.head.next;t!==e.tail;)n.push(t.value),t=t.next;return n}(a)},hooks:{all:{},add:function(e,n){var t=a.hooks.all;t[e]=t[e]||[],t[e].push(n)},run:function(e,n){var t=a.hooks.all[e];if(t&&t.length)for(var r,i=0;r=t[i++];)r(n)}},Token:i};function i(e,n,t,r){this.type=e,this.content=n,this.alias=t,this.length=0|(r||"").length}function l(e,n,t,r){e.lastIndex=n;var a=e.exec(t);if(a&&r&&a[1]){var i=a[1].length;a.index+=i,a[0]=a[0].slice(i)}return a}function o(e,n,t,r,s,g){for(var f in t)if(t.hasOwnProperty(f)&&t[f]){var h=t[f];h=Array.isArray(h)?h:[h];for(var d=0;d<h.length;++d){if(g&&g.cause==f+","+d)return;var v=h[d],p=v.inside,m=!!v.lookbehind,y=!!v.greedy,k=v.alias;if(y&&!v.pattern.global){var x=v.pattern.toString().match(/[imsuy]*$/)[0];v.pattern=RegExp(v.pattern.source,x+"g")}for(var b=v.pattern||v,w=r.next,A=s;w!==n.tail&&!(g&&A>=g.reach);A+=w.value.length,w=w.next){var E=w.value;if(n.length>e.length)return;if(!(E instanceof i)){var P,L=1;if(y){if(!(P=l(b,A,e,m))||P.index>=e.length)break;var S=P.index,O=P.index+P[0].length,j=A;for(j+=w.value.length;S>=j;)j+=(w=w.next).value.length;if(A=j-=w.value.length,w.value instanceof i)continue;for(var C=w;C!==n.tail&&(j<O||"string"==typeof C.value);C=C.next)L++,j+=C.value.length;L--,E=e.slice(A,j),P.index-=A}else if(!(P=l(b,0,E,m)))continue;S=P.index;var N=P[0],_=E.slice(0,S),M=E.slice(S+N.length),W=A+E.length;g&&W>g.reach&&(g.reach=W);var z=w.prev;if(_&&(z=u(n,z,_),A+=_.length),c(n,z,L),w=u(n,z,new i(f,p?a.tokenize(N,p):N,k,N)),M&&u(n,w,M),L>1){var I={cause:f+","+d,reach:W};o(e,n,t,w.prev,A,I),g&&I.reach>g.reach&&(g.reach=I.reach)}}}}}}function s(){var e={value:null,prev:null,next:null},n={value:null,prev:e,next:null};e.next=n,this.head=e,this.tail=n,this.length=0}function u(e,n,t){var r=n.next,a={value:t,prev:n,next:r};return n.next=a,r.prev=a,e.length++,a}function c(e,n,t){for(var r=n.next,a=0;a<t&&r!==e.tail;a++)r=r.next;n.next=r,r.prev=n,e.length-=a}if(e.Prism=a,i.stringify=function e(n,t){if("string"==typeof n)return n;if(Array.isArray(n)){var r="";return n.forEach((function(n){r+=e(n,t)})),r}var i={type:n.type,content:e(n.content,t),tag:"span",classes:["token",n.type],attributes:{},language:t},l=n.alias;l&&(Array.isArray(l)?Array.prototype.push.apply(i.classes,l):i.classes.push(l)),a.hooks.run("wrap",i);var o="";for(var s in i.attributes)o+=" "+s+'="'+(i.attributes[s]||"").replace(/"/g,"&quot;")+'"';return"<"+i.tag+' class="'+i.classes.join(" ")+'"'+o+">"+i.content+"</"+i.tag+">"},!e.document)return e.addEventListener?(a.disableWorkerMessageHandler||e.addEventListener("message",(function(n){var t=JSON.parse(n.data),r=t.language,i=t.code,l=t.immediateClose;e.postMessage(a.highlight(i,a.languages[r],r)),l&&e.close()}),!1),a):a;var g=a.util.currentScript();function f(){a.manual||a.highlightAll()}if(g&&(a.filename=g.src,g.hasAttribute("data-manual")&&(a.manual=!0)),!a.manual){var h=document.readyState;"loading"===h||"interactive"===h&&g&&g.defer?document.addEventListener("DOMContentLoaded",f):window.requestAnimationFrame?window.requestAnimationFrame(f):window.setTimeout(f,16)}return a}(_self);"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);</script>
+    <script>!function(){if("undefined"!=typeof Prism&&"undefined"!=typeof document){var e={javascript:"clike",actionscript:"javascript",apex:["clike","sql"],arduino:"cpp",aspnet:["markup","csharp"],birb:"clike",bison:"c",c:"clike",csharp:"clike",cpp:"c",cfscript:"clike",chaiscript:["clike","cpp"],cilkc:"c",cilkcpp:"cpp",coffeescript:"javascript",crystal:"ruby","css-extras":"css",d:"clike",dart:"clike",django:"markup-templating",ejs:["javascript","markup-templating"],etlua:["lua","markup-templating"],erb:["ruby","markup-templating"],fsharp:"clike","firestore-security-rules":"clike",flow:"javascript",ftl:"markup-templating",gml:"clike",glsl:"c",go:"clike",gradle:"clike",groovy:"clike",haml:"ruby",handlebars:"markup-templating",haxe:"clike",hlsl:"c",idris:"haskell",java:"clike",javadoc:["markup","java","javadoclike"],jolie:"clike",jsdoc:["javascript","javadoclike","typescript"],"js-extras":"javascript",json5:"json",jsonp:"json","js-templates":"javascript",kotlin:"clike",latte:["clike","markup-templating","php"],less:"css",lilypond:"scheme",liquid:"markup-templating",markdown:"markup","markup-templating":"markup",mongodb:"javascript",n4js:"javascript",objectivec:"c",opencl:"c",parser:"markup",php:"markup-templating",phpdoc:["php","javadoclike"],"php-extras":"php",plsql:"sql",processing:"clike",protobuf:"clike",pug:["markup","javascript"],purebasic:"clike",purescript:"haskell",qsharp:"clike",qml:"javascript",qore:"clike",racket:"scheme",cshtml:["markup","csharp"],jsx:["markup","javascript"],tsx:["jsx","typescript"],reason:"clike",ruby:"clike",sass:"css",scss:"css",scala:"java","shell-session":"bash",smarty:"markup-templating",solidity:"clike",soy:"markup-templating",sparql:"turtle",sqf:"clike",squirrel:"clike",stata:["mata","java","python"],"t4-cs":["t4-templating","csharp"],"t4-vb":["t4-templating","vbnet"],tap:"yaml",tt2:["clike","markup-templating"],textile:"markup",twig:"markup-templating",typescript:"javascript",v:"clike",vala:"clike",vbnet:"basic",velocity:"markup",wiki:"markup",xeora:"markup","xml-doc":"markup",xquery:"markup"},a={html:"markup",xml:"markup",svg:"markup",mathml:"markup",ssml:"markup",atom:"markup",rss:"markup",js:"javascript",g4:"antlr4",ino:"arduino","arm-asm":"armasm",art:"arturo",adoc:"asciidoc",avs:"avisynth",avdl:"avro-idl",gawk:"awk",sh:"bash",shell:"bash",shortcode:"bbcode",rbnf:"bnf",oscript:"bsl",cs:"csharp",dotnet:"csharp",cfc:"cfscript","cilk-c":"cilkc","cilk-cpp":"cilkcpp",cilk:"cilkcpp",coffee:"coffeescript",conc:"concurnas",jinja2:"django","dns-zone":"dns-zone-file",dockerfile:"docker",gv:"dot",eta:"ejs",xlsx:"excel-formula",xls:"excel-formula",gamemakerlanguage:"gml",po:"gettext",gni:"gn",ld:"linker-script","go-mod":"go-module",hbs:"handlebars",mustache:"handlebars",hs:"haskell",idr:"idris",gitignore:"ignore",hgignore:"ignore",npmignore:"ignore",webmanifest:"json",kt:"kotlin",kts:"kotlin",kum:"kumir",tex:"latex",context:"latex",ly:"lilypond",emacs:"lisp",elisp:"lisp","emacs-lisp":"lisp",md:"markdown",moon:"moonscript",n4jsd:"n4js",nani:"naniscript",objc:"objectivec",qasm:"openqasm",objectpascal:"pascal",px:"pcaxis",pcode:"peoplecode",plantuml:"plant-uml",pq:"powerquery",mscript:"powerquery",pbfasm:"purebasic",purs:"purescript",py:"python",qs:"qsharp",rkt:"racket",razor:"cshtml",rpy:"renpy",res:"rescript",robot:"robotframework",rb:"ruby","sh-session":"shell-session",shellsession:"shell-session",smlnj:"sml",sol:"solidity",sln:"solution-file",rq:"sparql",sclang:"supercollider",t4:"t4-cs",trickle:"tremor",troy:"tremor",trig:"turtle",ts:"typescript",tsconfig:"typoscript",uscript:"unrealscript",uc:"unrealscript",url:"uri",vb:"visual-basic",vba:"visual-basic",webidl:"web-idl",mathematica:"wolfram",nb:"wolfram",wl:"wolfram",xeoracube:"xeora",yml:"yaml"},r={},s="components/",i=Prism.util.currentScript();if(i){var t=/\bplugins\/autoloader\/prism-autoloader\.(?:min\.)?js(?:\?[^\r\n/]*)?$/i,c=/(^|\/)[\w-]+\.(?:min\.)?js(?:\?[^\r\n/]*)?$/i,l=i.getAttribute("data-autoloader-path");if(null!=l)s=l.trim().replace(/\/?$/,"/");else{var p=i.src;t.test(p)?s=p.replace(t,"components/"):c.test(p)&&(s=p.replace(c,"$1components/"))}}var n=Prism.plugins.autoloader={languages_path:s,use_minified:!0,loadLanguages:m};Prism.hooks.add("complete",(function(e){var a=e.element,r=e.language;if(a&&r&&"none"!==r){var s=function(e){var a=(e.getAttribute("data-dependencies")||"").trim();if(!a){var r=e.parentElement;r&&"pre"===r.tagName.toLowerCase()&&(a=(r.getAttribute("data-dependencies")||"").trim())}return a?a.split(/\s*,\s*/g):[]}(a);/^diff-./i.test(r)?(s.push("diff"),s.push(r.substr("diff-".length))):s.push(r),s.every(o)||m(s,(function(){Prism.highlightElement(a)}))}}))}function o(e){if(e.indexOf("!")>=0)return!1;if((e=a[e]||e)in Prism.languages)return!0;var s=r[e];return s&&!s.error&&!1===s.loading}function m(s,i,t){"string"==typeof s&&(s=[s]);var c=s.length,l=0,p=!1;function k(){p||++l===c&&i&&i(s)}0!==c?s.forEach((function(s){!function(s,i,t){var c=s.indexOf("!")>=0;function l(){var e=r[s];e||(e=r[s]={callbacks:[]}),e.callbacks.push({success:i,error:t}),!c&&o(s)?u(s,"success"):!c&&e.error?u(s,"error"):!c&&e.loading||(e.loading=!0,e.error=!1,function(e,a,r){var s=document.createElement("script");s.src=e,s.async=!0,s.onload=function(){document.body.removeChild(s),a&&a()},s.onerror=function(){document.body.removeChild(s),r&&r()},document.body.appendChild(s)}(function(e){return n.languages_path+"prism-"+e+(n.use_minified?".min":"")+".js"}(s),(function(){e.loading=!1,u(s,"success")}),(function(){e.loading=!1,e.error=!0,u(s,"error")})))}s=s.replace("!","");var p=e[s=a[s]||s];p&&p.length?m(p,l,t):l()}(s,k,(function(){p||(p=!0,t&&t(s))}))})):i&&setTimeout(i,0)}function u(e,a){if(r[e]){for(var s=r[e].callbacks,i=0,t=s.length;i<t;i++){var c=s[i][a];c&&setTimeout(c,0)}s.length=0}}}();</script>
+    <script>
+        // モバイルメニュー切り替え
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
