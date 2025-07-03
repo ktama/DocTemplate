@@ -1,1 +1,4 @@
-sample.html
+# すべてのHTMLファイルを無視
+*.html
+# 生成に使用するtemplate.htmlは追跡対象
+!template.html
