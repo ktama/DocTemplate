@@ -5,7 +5,7 @@ standalone: true
 template: template.html
 toc: true
 toc-depth: 4
-number-sections: false
+number-sections: true
 highlight-style: null
 html-math-method: katex
 
