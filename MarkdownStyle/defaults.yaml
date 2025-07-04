@@ -3,7 +3,7 @@ from: markdown
 to: html5
 standalone: true
 self-contained: true
-template: template.html
+template: MarkdownStyle/template.html
 toc: true
 toc-depth: 4
 number-sections: true
@@ -12,7 +12,7 @@ html-math-method: katex
 
 # Mermaid設定
 filters:
-  - mermaid.lua
+  - MarkdownStyle/mermaid.lua
 
 # 入出力設定
 input-files: []

@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "pandoc",
             "args": [
-                "--defaults=defaults.yaml",
+                "--defaults=${workspaceFolder}/MarkdownStyle/defaults.yaml",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.html"
