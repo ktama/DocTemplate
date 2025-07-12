@@ -65,12 +65,36 @@ def latest_task_file(before: dt.date) -> pathlib.Path | None:
 
 
 def load_unfinished(path: pathlib.Path) -> list[str]:
-    """'- [ ]' で始まる行（未完了タスク）だけ抽出"""
+    """
+    前回ファイルから「未完了タスクブロック」を丸ごと抽出して返す関数
+
+    - 先頭が '- [ ]' で始まる行をタスク開始と判定
+    - その直後に続く **インデント付き行（2空白以上で始まり、空行でない）** を
+      同じタスクの詳細行としてまとめて取得
+    - 完了タスク（'- [x]') は無視
+    """
     if not path or not path.exists():
         return []
-    patt = re.compile(r"^\s*-\s\[\s\]\s")
-    return [ln for ln in path.read_text(encoding="utf-8").splitlines(keepends=True)
-            if patt.match(ln)]
+
+    lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+    blocks: list[str] = []
+    grab = False
+
+    for ln in lines:
+        # 1) 未完了タスクの開始行を検出
+        if re.match(r"^\s*-\s\[\s\]\s", ln):
+            grab = True
+            blocks.append(ln)
+            continue
+
+        # 2) 直前が未完了タスクなら、インデント行を同ブロックとして追加
+        if grab and re.match(r"^\s{2,}\S", ln):
+            blocks.append(ln)
+        else:
+            # インデント条件を満たさなくなったらブロック終了
+            grab = False
+
+    return blocks
 
 
 def git_is_available() -> bool:
